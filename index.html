@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Expense Tracker</title>
+<title>Kharcha</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -134,7 +134,7 @@
 <body>
 <div class="app">
   <header>
-    <div class="logo">spend<span>wise</span></div>
+    <div class="logo">spend<span>cha</span></div>
     <div class="month-badge" id="monthBadge"></div>
   </header>
 
@@ -248,7 +248,7 @@ const ICONS = { Food:'🍱', Transport:'🚌', Shopping:'🛍️', Entertainment
 const CAT_COLORS = ['#7c6af7','#f7c06a','#4ade80','#f87171','#60a5fa','#fb923c','#a78bfa','#34d399'];
 
 let txType = 'expense';
-let transactions = JSON.parse(localStorage.getItem('spendwise_txns') || '[]');
+let transactions = JSON.parse(localStorage.getItem('kharcha_txns'))
 
 function setType(t) {
   txType = t;
@@ -281,7 +281,7 @@ function deleteTransaction(id) {
   renderAll();
 }
 
-function save() { localStorage.setItem('spendwise_txns', JSON.stringify(transactions)); }
+function save() { localStorage.setItem('kharcha_txns', JSON.stringify(transactions)); }
 function renderAll() { renderSummary(); renderList(); renderDonut(); renderBars(); }
 
 function renderSummary() {
